@@ -77,17 +77,15 @@ public class PrimeraPila {
     // d. Método para eliminar un elemento de la pila en una posición específica.
     public void eliminar(int[] vectorElementos, int posicion) {
         if (posicion <= tope && posicion >= 0) {
-            // Adjust even/odd count
+            
             if (vectorElementos[posicion] % 2 == 0) npar--;
             else nimpar--;
 
-            // Shift elements to fill the gap
             for (int i = posicion; i < tope; i++) {
                 vectorElementos[i] = vectorElementos[i + 1];
             }
 
-            // Clear the last element and adjust `tope`
-            vectorElementos[tope] = 0;  // Optional: clear removed position
+            vectorElementos[tope] = 0; 
             tope--;
 
             System.out.println("Elemento en posición " + posicion + " eliminado de la pila.");
