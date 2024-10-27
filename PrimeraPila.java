@@ -73,16 +73,26 @@ public class PrimeraPila {
         }
     }
 
-    // d. Método para eliminar el elemento del tope de la pila.
-    public void eliminar(int[] vectorElementos) {
-        if (tope >= 0) {
-            if (vectorElementos[tope] % 2 == 0) npar--;
+    
+    // d. Método para eliminar un elemento de la pila en una posición específica.
+    public void eliminar(int[] vectorElementos, int posicion) {
+        if (posicion <= tope && posicion >= 0) {
+            // Adjust even/odd count
+            if (vectorElementos[posicion] % 2 == 0) npar--;
             else nimpar--;
 
-            System.out.println("Elemento " + vectorElementos[tope] + " eliminado de la pila.");
+            // Shift elements to fill the gap
+            for (int i = posicion; i < tope; i++) {
+                vectorElementos[i] = vectorElementos[i + 1];
+            }
+
+            // Clear the last element and adjust `tope`
+            vectorElementos[tope] = 0;  // Optional: clear removed position
             tope--;
+
+            System.out.println("Elemento en posición " + posicion + " eliminado de la pila.");
         } else {
-            System.out.println("La pila está vacía, no se puede eliminar ningún elemento.");
+            System.out.println("Posición fuera de rango.");
         }
     }
 
@@ -117,8 +127,9 @@ public class PrimeraPila {
             int nuevoValor = teclado.nextInt();
             pila1.actualizar(vector, posicion, nuevoValor);
 
-            System.out.println("\nEliminando el elemento del tope de la pila...");
-            pila1.eliminar(vector);
+            System.out.println("\nIngrese una posición para eliminar de la pila: ");
+            int posicionEliminar = teclado.nextInt();
+            pila1.eliminar(vector, posicionEliminar);
 
             pila1.imprimir(vector);
             pila1.mostrar();
