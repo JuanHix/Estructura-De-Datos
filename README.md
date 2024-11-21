@@ -1,15 +1,19 @@
 # 🌟 Estructuras de Datos en Java
 
-¡Bienvenido a **Estructuras de Datos en Java**! Este repositorio contiene implementaciones prácticas, explicaciones y ejemplos de las estructuras de datos más utilizadas en Java. Ideal para estudiantes, desarrolladores principiantes e intermedios y para cualquier persona interesada en perfeccionar sus habilidades en estructuras de datos.
+¡Bienvenido a **Estructuras de Datos en Java**! 
+
+Este repositorio recopila implementaciones prácticas y ejemplos de las estructuras de datos más utilizadas en Java. Ha sido creado con el objetivo de ofrecer soluciones claras y funcionales para cada una de las actividades prácticas de la clase **Estructura de Datos** de Ucompensar.
 
 ---
 
 ## 📚 Contenido del Repositorio
 
-### 1. Estructuras Lineales
-- **Array**: Implementación y operaciones básicas.
-- **ArrayList**: Uso, ventajas y desventajas.
-- **LinkedList**: Lista enlazada simple y doble.
-- **Stack**: Implementación y ejemplos (LIFO).
-- **Queue**: Implementación y ejemplos (FIFO).
-- **Deque**: Uso como pila o cola doblemente terminada.
+### Estructuras de Datos Incluidas
+
+- **Array**: Implementación básica y ejemplo práctico.
+- **Listas**: 
+  - Lista enlazada simple.
+  - Lista doblemente enlazada.
+- **Pila (Stack)**: Implementación y ejemplos basados en el principio LIFO (*Last In, First Out*).
+- **Cola (Queue)**: Implementación y ejemplos basados en el principio FIFO (*First In, First Out*).
+- **Deque (Double-Ended Queue)**: Uso versátil como pila o cola doblemente terminada.
